@@ -18,30 +18,37 @@
             </div>
             
             <div class="btn-container">
-                <button onclick="clearInput('inputText'); updateText('inputText')">Clear</button>
                 <button onclick="whatsLink()">Whats</button>
+                <button onclick="clearInput('inputText'); updateText('inputText')">Clear</button>
             </div>
         </div>
 
-
-
         <div class="output-group">
-            <div class="output-row">
-                <input type="text" id="upperCaseText" readonly>
-                <button onclick="copyText('upperCaseText')">Copy</button>
-            </div>
-            <div class="output-row">                
-                <input type="text" id="lowerCaseText" readonly>
-                <button onclick="copyText('lowerCaseText')">Copy</button>
-            </div>
-            <div class="output-row">                
-                <input type="text" id="numbersText" readonly>
-                <button onclick="copyText('numbersText')">Copy</button>
-            </div>
-            <div class="output-row">                
-                <input type="text" id="spacesText" readonly>
-                <button onclick="copyText('spacesText')">Copy</button>
-            </div>
+           <div class="output-texts">
+                <p class="output-text">Upper</p>
+                <p class="output-text">Lower</p>
+                <p class="output-text">Numbers</p>
+                <p class="output-text">No Spaces</p>
+           </div>
+
+           <div class="output-rows">
+                <div class="output-row">
+                    <input type="text" id="upperCaseText" readonly>
+                    <button onclick="copyText('upperCaseText')">Copy</button>
+                </div>
+                <div class="output-row">                
+                    <input type="text" id="lowerCaseText" readonly>
+                    <button onclick="copyText('lowerCaseText')">Copy</button>
+                </div>
+                <div class="output-row">                
+                    <input type="text" id="numbersText" readonly>
+                    <button onclick="copyText('numbersText')">Copy</button>
+                </div>
+                <div class="output-row">                
+                    <input type="text" id="spacesText" readonly>
+                    <button onclick="copyText('spacesText')">Copy</button>
+                </div>
+           </div>
         </div>
     </div>
     

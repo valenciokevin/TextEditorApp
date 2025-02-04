@@ -17,13 +17,6 @@ input[type="text"] {
     font-size: 16px;
 }
 
-.output-row {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-    gap: 10px;
-}
 
 button {
     padding: 8px;
@@ -85,8 +78,26 @@ button:hover {
 
 .output-group {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center; /* Centraliza os elementos */
+    justify-content: space-between;
+    align-content: center;
+    gap: 10px;
+}
+
+.output-rows {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.output-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
     gap: 10px;
 }
 
@@ -98,3 +109,15 @@ button:hover {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+.output-texts {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.output-text {
+    padding: 5, 0, 5, 0;
+}
+
