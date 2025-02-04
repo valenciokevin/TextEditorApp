@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="input-group">
+            <div class="title-container">
+                <h1>Text Editor App</h1>
+            </div>
+
+            <div class="text-input-container">
+                <input type="text" placeholder="Texto:" id="inputText" oninput="updateText()">
+            </div>
+            
+            <div class="btn-container">
+                <button onclick="clearInput('inputText'); updateText('inputText')">Clear</button>
+                <button onclick="whatsLink()">Whats</button>
+            </div>
+        </div>
+
+
+
+        <div class="output-group">
+           <div class="output-text">
+                <p>Upper</p>
+                <p>Lower</p>
+                <p>Numbers</p>
+                <p>No Spaces</p>
+           </div>
+
+           <div class="output-rows">
+                
+           </div>
+            <div class="output-row">
+                <input type="text" id="upperCaseText" readonly>
+                <button onclick="copyText('upperCaseText')">Copy</button>
+            </div>
+            <div class="output-row">                
+                <input type="text" id="lowerCaseText" readonly>
+                <button onclick="copyText('lowerCaseText')">Copy</button>
+            </div>
+            <div class="output-row">                
+                <input type="text" id="numbersText" readonly>
+                <button onclick="copyText('numbersText')">Copy</button>
+            </div>
+            <div class="output-row">                
+                <input type="text" id="spacesText" readonly>
+                <button onclick="copyText('spacesText')">Copy</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
