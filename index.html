@@ -7,51 +7,53 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <div class="input-group">
-            <div class="title-container">
-                <h1>Text Editor App</h1>
-            </div>
 
-            <div class="text-input-container">
-                <input type="text" placeholder="Texto:" id="inputText" oninput="updateText()">
-            </div>
-            
-            <div class="btn-container">
-                <button onclick="whatsLink()">Whats</button>
-                <button onclick="clearInput('inputText'); updateText('inputText')">Clear</button>
+    <div class="container">
+        <div class="textarea-container">
+            <h1>Editor</h1>
+            <textarea class="input-text" id="inputText" placeholder="Digite aqui..." oninput="updateText()"></textarea>
+            <div class="input-button-container">
+                <button id="clearBtn" onclick="clearInput('inputText'); updateText('inputText')">Clear</button>
+                <button id="whatsBtn" onclick="whatsNumber()">Whats</button>
             </div>
         </div>
 
-        <div class="output-group">
-           <div class="output-texts">
-                <p class="output-text">Upper</p>
-                <p class="output-text">Lower</p>
-                <p class="output-text">Numbers</p>
-                <p class="output-text">No Spaces</p>
-           </div>
+        <div class="output-container">
+            <div class="output-item">
+                <div class="output-label">
+                    <label for="">Upper</label>
+                    <button class="copy-btn" onclick="copyText('upperTextOutput')">Copy</button>
+                </div>
+                <textarea id="upperTextOutput" class="output-text" readonly></textarea>
+            </div>
 
-           <div class="output-rows">
-                <div class="output-row">
-                    <input type="text" id="upperCaseText" readonly>
-                    <button onclick="copyText('upperCaseText')">Copy</button>
+            <div class="output-item">
+                <div class="output-label">
+                    <label for="">Lower</label>
+                    <button class="copy-btn" onclick="copyText('lowerCaseOutput')">Copy</button>
                 </div>
-                <div class="output-row">                
-                    <input type="text" id="lowerCaseText" readonly>
-                    <button onclick="copyText('lowerCaseText')">Copy</button>
+                <textarea id="lowerCaseOutput" class="output-text" readonly></textarea>
+            </div>
+
+            <div class="output-item">
+                <div class="output-label">
+                    <label for="">No Spaces</label>
+                    <button class="copy-btn" onclick="copyText('noSpacesOutput')">Copy</button>
                 </div>
-                <div class="output-row">                
-                    <input type="text" id="numbersText" readonly>
-                    <button onclick="copyText('numbersText')">Copy</button>
+                <textarea id="noSpacesOutput" class="output-text" readonly></textarea>
+            </div>
+
+            <div class="output-item">
+                <div class="output-label">
+                    <label for="">Numbers</label>
+                    <button class="copy-btn" onclick="copyText('onlyNumbersOutput')">Copy</button>
                 </div>
-                <div class="output-row">                
-                    <input type="text" id="spacesText" readonly>
-                    <button onclick="copyText('spacesText')">Copy</button>
-                </div>
-           </div>
+                <textarea id="onlyNumbersOutput" class="output-text" readonly></textarea>
+            </div>
         </div>
     </div>
-    
-    <script src="js/script.js"></script>
+
+
+    <script src="js/script.js"></script>    
 </body>
 </html>
